@@ -71,7 +71,7 @@ while cap.isOpened():
             cv2.putText(frame, f"Eyebrow Distance: {eyebrow_eye_distance}", (10, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
 
             # Thresholds for zooming
-            if eyebrow_eye_distance > 25 and (time.time() - last_zoom_time > 0.5):  # Zoom Out
+            if eyebrow_eye_distance > 23 and (time.time() - last_zoom_time > 0.5):  # Zoom Out
                 cv2.putText(frame, "Zoom Out", (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
                 pyautogui.hotkey('ctrl', '-')  # Zoom out
                 last_zoom_time = time.time()
